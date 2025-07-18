@@ -57,8 +57,3 @@ This project demonstrates the fundamentals of MongoDB using **MongoDB Compass** 
 ---
 
 <img width="1352" height="713" alt="image" src="https://github.com/user-attachments/assets/10863c86-145c-478e-a071-4fa1f1346814" />
-
-
-Add your Compass screenshot file (e.g., `screenshot.png`) here in the repo and paste it below:
-
-![Books Collection Screenshot](./screenshot.png)ative/) 
