@@ -1,47 +1,64 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19956552&assignment_repo_type=AssignmentRepo)
 # MongoDB Fundamentals Assignment
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+This project demonstrates the fundamentals of MongoDB using **MongoDB Compass** only.
 
-## Assignment Overview
+## Prerequisites
+- MongoDB installed locally and `mongod` service running  
+- MongoDB Compass installed
+- Git & GitHub Classroom access
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+## Setup & Usage
 
-## Getting Started
+1. **Start MongoDB**
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+   - **Windows**: Start `MongoDB Server` in Services (services.msc), or run:
+     ```bash
+     "C:\Program Files\MongoDB\Server\6.0\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\6.0\bin\mongod.cfg"
+     ```
 
-## Files Included
+   - **macOS** (Homebrew):
+     ```bash
+     brew services start mongodb-community
+     ```
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+   - **Linux** (systemd):
+     ```bash
+     sudo systemctl start mongod
+     ```
 
-## Requirements
+2. **Open MongoDB Compass**
+   - Connect to: `mongodb://localhost:27017`
+   - Click **Connect**.
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
+3. **Create Database & Collection**
+   - Click **+ Create Database**  
+     - **Database Name:** `plp_bookstore`  
+     - **Collection Name:** `books`  
+   - Click **Create Database**.
 
-## Submission
+4. **Insert Sample Data**
+   - Go to **plp_bookstore ▶️ books**  
+   - Use **Insert Document** to add 10 sample book records (see `queries.js` for reference JSON).
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+5. **Run Queries in Compass**
+   - Use **Filter**, **Project**, **Sort**, **Limit**, **Skip**, and **Aggregation** tabs.
+   - Create indexes under the **Indexes** tab and compare performance with **Explain Plan**.
 
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
+6. **Submission**
+   - Include a screenshot of the **books** collection showing all 10 entries (paste it below).
+   - Commit & Push:
+     ```bash
+     git add README.md queries.js screenshot.png
+     git commit -m "Complete MongoDB Fundamentals Assignment"
+     git push origin main
+     ```
 
-## Resources
+---
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+<img width="1352" height="713" alt="image" src="https://github.com/user-attachments/assets/10863c86-145c-478e-a071-4fa1f1346814" />
+
+
+Add your Compass screenshot file (e.g., `screenshot.png`) here in the repo and paste it below:
+
+![Books Collection Screenshot](./screenshot.png)ative/) 
